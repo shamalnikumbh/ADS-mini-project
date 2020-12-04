@@ -1,0 +1,365 @@
+import java.util.Calendar;
+import java.util.Scanner;
+class user
+{
+    String name;
+    String address;
+    String number;
+    user()
+    {
+        
+    }
+    user(String s1, String s2, String s3 )
+    {
+       name = s1;
+       address = s2;
+       number = s3;
+    }
+    
+}
+class Pro
+{ 
+    
+   
+    public static void main(String[] args)
+    {   int q,i;
+        user array[ ]=new user[30];
+        //int i=0;
+        //Pro arr[]=new Pro[100];
+        // call start
+        
+        Pro start1 = new Pro();
+        start1.start();
+        
+        do
+        {
+      
+        
+        System.out.println("------------------------------------------------------------------------------");
+        System.out.println("Enter your name :-");
+        Scanner input = new Scanner(System.in);
+        String myString = input.nextLine();
+        System.out.println("_________________");
+        System.out.println("Enter your address ");
+        Scanner input1 = new Scanner(System.in);
+        String myString1 = input1.nextLine();
+        System.out.println("_________________");
+        System.out.println("Enter your number ");
+        Scanner input2 = new Scanner(System.in);
+        String myString2 = input2.next();
+        System.out.println(" _____________________________");
+        System.out.println("| Hello your name is " + myString +",. Your address is " + myString1+ ".");
+        System.out.println("| And Your Mobile number is - " + myString2 );
+        System.out.println("|_____________________________");
+    
+         i=0;
+        
+        array[i]= new user(myString,myString1,myString2);
+        i++; 
+         
+        
+        
+        Pro location1 = new Pro();
+        location1.location();  
+       // arr[i]=new enter[];
+       System.out.println("|_____________________________");
+
+        System.out.println("Entered yours information ");
+        for(int j=0;j<i;j++)
+         {
+             System.out.println(" Name -"+array[j].name);
+             System.out.println(" Address - "+array[j].address);
+             System.out.println(" Number -  "+array[j].number);
+         }
+                System.out.println("|_____________________________");     
+           
+                        System.out.println("------------------------------------------------------------------------------");
+
+                System.out.println(" For continue press anykey");
+            System.out.println("For Exit press 0 ");
+                    System.out.println("------------------------------------------------------------------------------");
+
+        q = input.nextInt();
+        
+        
+        }
+        while( q!=0);
+          
+
+    }
+    void start()
+    {
+       System.out.println(" -----------------------------------------------------------------------------");
+       System.out.println("|               * Welcome to Orphanage Requirement Management System*            |");
+       System.out.println(" -----------------------------------------------------------------------------");
+       String months[] = {"JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUN","JULY","AUGUST","SEPTEMBER","OCTOMBER","NOVEMBER","DECEMBER"};
+       Calendar calendar = Calendar.getInstance();
+       System.out.print("CURRENT DATE IS : " + calendar.get(Calendar.DATE) + " "+ months[calendar.get(Calendar.MONTH)] + " " + calendar.get(Calendar.YEAR));
+       System.out.println("\t\t\t CURRENT TIME IS: " + calendar.get(Calendar.HOUR) + ":" + calendar.get(Calendar.MINUTE) + ":" + calendar.get(Calendar.SECOND));
+       System.out.println("__________________________");
+    }
+ 
+    
+    void location()
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.println("\n ~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println("|   Select your orphan location 1.PCMC 2.WAKAD 3.PUNE 4.VIMAN NAGAR   |");
+        System.out.println(" ~~~~~~~~~~~~~~~~~~~~~~~~");
+        int num = input.nextInt(); 
+        switch(num)
+        {
+            case 1: Pro orphan = new Pro();
+                    orphan.orpan1();
+                    break;
+            case 2: Pro orphan7 = new Pro();
+                    orphan7.orpan2();
+                    break;
+            case 3: Pro orphan8 = new Pro();
+                    orphan8.orpan3();
+                    break;
+            case 4: Pro orphan9 = new Pro();
+                    orphan9.orpan4();
+                    break;
+            default: System.out.println("YOU SELECT Wrong Option");
+                    break;        
+        }
+    }   
+    void orpan1()
+    {   System.out.println("Thanks for choosing PCMC Area");
+    System.out.println("\n-----------------------------------------------------------------");
+        System.out.println("In this Orphan there are 45 boys and 16 Girls");
+            System.out.println("\n-----------------------------------------------------------------");
+
+    
+        System.out.println(" In PCMS Orphan we require 40 shirt for boys ");
+        System.out.println("Do you want to donate ? 1. yes or 2. no ");
+        System.out.println("___________________");
+        Scanner reader1 = new Scanner(System.in);        
+        int number51 = reader1.nextInt();
+        if(number51==1)
+        {
+        //calling provide function
+        Pro provide = new Pro();
+        provide.provide();
+        }
+        else
+        {
+            Pro notprovide1 = new Pro();
+            notprovide1.notprovide();
+        }
+        System.out.println("Address of orphan is PCMS near Dmart ");
+    }
+    void orpan2()
+    {    System.out.println("Thanks for choosing Wakad Area");
+    System.out.println("\n-----------------------------------------------------------------");
+    System.out.println("In this Orphan there are 15 boys and 6 Girls");
+        System.out.println("\n-----------------------------------------------------------------");
+
+        System.out.println(" In Wakad Orphan we require 40000 for student admission");
+        System.out.println("Do you want to donate ? 1. yes or 2. no ");
+        System.out.println("___________________");
+        Scanner reader1 = new Scanner(System.in);        
+        int number52 = reader1.nextInt();
+        if(number52==1)
+        {
+        //calling provide function
+        Pro provide = new Pro();
+        provide.provide();
+        }
+        else
+        {
+            Pro notprovide1 = new Pro();
+            notprovide1.notprovide();
+        }
+        System.out.println("Address of orphan is Shaktri chowk");
+    }
+    void orpan3()
+    {   System.out.println("Thanks for choosing Pune Area");
+    System.out.println("\n-----------------------------------------------------------------");
+    System.out.println("In this Orphan there are 24 boys and 25 Girls");
+        System.out.println("\n-----------------------------------------------------------------");
+
+        System.out.println(" In Pune Orphan we require 2 Bats and 2 fotball");
+        System.out.println("Do you want to donate ? 1. yes or 2. no ");
+        System.out.println("___________________");
+        //calling provide function
+        Scanner reader1 = new Scanner(System.in);        
+        int number53 = reader1.nextInt();
+        if(number53==1)
+        {
+        //calling provide function
+        Pro provide = new Pro();
+        provide.provide();
+        }
+        else
+        {
+            Pro notprovide1 = new Pro();
+            notprovide1.notprovide();
+        }
+        System.out.println("Address of orphan is PCMS near Dmart ");
+    }
+    void orpan4()
+    {    System.out.println("Thanks for choosing Viman Nagar Area");
+    System.out.println("\n-----------------------------------------------------------------");
+    System.out.println("In this Orphan there are 12 boys and 29 Girls");
+        System.out.println("\n-----------------------------------------------------------------");
+
+        System.out.println(" In Viman Nagar Orphan we require Invertor");
+        System.out.println("Do you want to donate ? 1. yes or 2. no ");
+        System.out.println("___________________");
+        // calling provide function
+       Scanner reader1 = new Scanner(System.in);        
+        int number54 = reader1.nextInt();
+        if(number54==1)
+        {
+        //calling provide function
+        Pro provide = new Pro();
+        provide.provide();
+        }
+        else
+        {
+            Pro notprovide1 = new Pro();
+            notprovide1.notprovide();
+        }
+        System.out.println("Address of orphan is Air port road ");
+                System.out.println("\n-----------------------------------------------------------------");
+
+    }
+    void provide()
+    {System.out.println("\n-----------------------------------------------------------------");
+        System.out.println("how do you want to provide this 1.Courier 2. Visit Orphan");
+        System.out.println("\n-----------------------------------------------------------------");
+        //Scanner reader = new Scanner(System.in);
+        //int number = reader.nextInt();  
+        Scanner reader1 = new Scanner(System.in);        
+        int number5 = reader1.nextInt();     
+                        if(number5 == 1)
+                        {
+                            System.out.println(" Thanks For choosing Courier Facility in this pandamic");
+                            System.out.println(" please send your Courier on folloing address");   
+                            System.out.println("Ones you receive your courier we will let you know");
+                                    System.out.println("\n-----------------------------------------------------------------");
+
+                        }
+                        else
+                        {     
+                        Pro visit1 = new Pro();
+                        visit1.visit();
+                        }
+    }
+    void visit()
+    {
+        System.out.println("\n--------------------------------------------------------------------------");
+        System.out.println(" Thanks for choosing this option you can enter date and time and vising following address");
+        System.out.println("\n--------------------------------------------------------------------------");
+                            System.out.println("Enter date");
+                            Scanner input12 = new Scanner(System.in);
+                            String myString12 = input12.next(); 
+                            System.out.println("Enter time");
+                            Scanner input11 = new Scanner(System.in);
+                            String myString11 = input11.next();
+                            System.out.println("___________________");
+                            System.out.println("|  your entered date is " + myString12 +"  |");
+                            System.out.println("|  your entered time is " + myString11 +"    |");
+                            System.out.println("___________________");
+    }
+    void notprovide()
+    {             System.out.println("\n-----------------------------------------------------------------");
+    
+                     System.out.println("What do you want to donate?");
+                     System.out.println("\n-----------------------------------------------------------------");
+                     System.out.println("1.Cloths 2.money 3.Toys 4.Other");   
+                    Scanner input27 = new Scanner(System.in); 
+                     int numswitch = input27.nextInt();
+                     switch(numswitch)
+                     {
+                         case 1:
+                              System.out.println("Great you want to donate cloths");
+                              System.out.println("\n-----------------------------------------------------------------");
+                              System.out.println(" Do you want to send it by 1. Courier 2.Pick UP 3.Visit ");
+                              System.out.println(" select 1. Courier 2.Pick UP 3.Visit");
+                              int numswitch2=input27.nextInt();
+                              switch(numswitch2)
+                              {
+                                  case 1:
+                                      System.out.println("Thanks you choosing Courier option");
+                                      System.out.println("\n-----------------------------------------------------------------");
+                                      System.out.println("Please send this on our locatin");
+                                      System.out.println("Ones we receive your packge we let you know, Thank You!!");
+                                      break;
+                                  case 2:
+                                      System.out.println("Thanks you choosing Pick Up option");
+                                      System.out.println("\n-----------------------------------------------------------------");
+                                      System.out.println(" We will send our pickup truck within 1 or 2 days");
+                                      System.out.println("Ones we receive your packge we let you know, Thank You!!");
+                                      break;
+                                  case 3:
+                                        Pro visit1 = new Pro();
+                                        visit1.visit();
+                                      
+                                        break;
+                                  default : System.out.println("You enterd wrong option");
+                                  break;
+                              }
+                              break;
+                         case 2 : 
+                             System.out.println("Great you want to donate money");
+                             System.out.println("\n-----------------------------------------------------------------");
+                             System.out.println(" Do you want to send it by online banking or Visit orphan 1. online 2.visit");
+                             int numswitch1 = input27.nextInt();
+                             if (numswitch==1)
+                             {
+                                 System.out.println("this are the bank details of our orphan, once we receive payment we let you know");
+                                 System.out.println("Upi - 7798997700");
+                                 System.out.println("NEFT- Account Number: 44644684644646 IFSC Code : SBIN0000144 ");
+                             }
+                             else
+                             {
+                                 Pro visit1 = new Pro();
+                                 visit1.visit();
+                             }
+                             break;
+                         case 3 :
+                              System.out.println("Great you want to donate Toys");
+                              System.out.println("\n-----------------------------------------------------------------");
+                             System.out.println(" Do you want to send it by online banking or Visit orphan 1.Courier 2.visit");
+                             int numswitch75 = input27.nextInt();
+                             if (numswitch75==1)
+                             {
+                                 System.out.println("Thanks for chosing Courier option");
+                                 System.out.println("Send Your Courier On Given address. ones we get it we will let you know");
+                             }
+                             else
+                             {
+                                 Pro visit1 = new Pro();
+                                 visit1.visit();
+                             }
+                             break;
+                         case 4 : 
+                             System.out.println("What other do you want to donate");
+                             System.out.println("\n-----------------------------------------------------------------");
+                             System.out.println(" please enter your other requirements");
+                             Scanner input99 = new Scanner(System.in);
+                             String myString99 = input99.nextLine();
+                             System.out.println(" Your requirements is "+myString99);
+                             System.out.println(" Do you want to send it by Courier or Visit orphan 1. Courier 2.visit");
+                             int numswitch78 = input27.nextInt();
+                             if (numswitch78==1)
+                             {
+                                 System.out.println("Thanks you choosing Courier option");
+                                 System.out.println("Ones we receive your courier we will let know know on your mobile number");
+                             }
+                             else
+                             {
+                                 Pro visit1 = new Pro();
+                                 visit1.visit();
+                             }
+                             break;
+                     }
+       System.out.println("\n------------------------------------------------------------------------------");
+       System.out.println("               * THANK YOU!!!*");
+       System.out.println("------------------------------------------------------------------------------");
+    }
+           
+}
